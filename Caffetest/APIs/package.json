@@ -31,5 +31,8 @@
     "mocha-junit-reporter": "^2.2.1",
     "prettier": "^3.6.2",
     "supertest": "^7.1.4"
+  },
+  "dependencies": {
+    "@babel/register": "^7.28.3"
   }
 }

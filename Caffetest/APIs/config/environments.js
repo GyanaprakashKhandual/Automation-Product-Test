@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const environments = {
   development: {
-    baseURL: process.env.BASE_URL || 'https://dev-api.example.com',
+    baseURL: process.env.BASE_URL || 'http://localhost:5000',
     apiKey: process.env.API_KEY,
     timeout: parseInt(process.env.API_TIMEOUT) || 30000,
   },
