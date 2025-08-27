@@ -1,0 +1,7 @@
+calf\api\hooks\TestHooks.class
+calf\api\utils\TestDataProvider.class
+calf\api\stepdefinitions\GetUserSteps.class
+calf\api\utils\ExtentReportManager.class
+calf\api\clients\BaseAPIClient.class
+calf\api\listeners\TestNGListener.class
+calf\api\runners\APITestRunner.class

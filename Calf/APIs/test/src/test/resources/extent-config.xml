@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <theme>dark</theme>
+        
+        <!-- document encoding -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- protocol for script and stylesheets -->
+        <protocol>https</protocol>
+        
+        <!-- title of the document -->
+        <documentTitle>API Test Report</documentTitle>
+        
+        <!-- report name -->
+        <reportName>Automation Test Report</reportName>
+        
+        <!-- location of charts in the test view -->
+        <testViewChartLocation>top</testViewChartLocation>
+        
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // custom javascript
+                });
+            ]]>
+        </scripts>
+        
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                /* custom styles */
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {
-        "com.calf.api.stepdefinitions",
-        "com.calf.api.hooks"
+        "calf.api.stepdefinitions",
+        "calf.api.hooks"
     },
     plugin = {
         "pretty",
