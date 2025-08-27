@@ -1,1 +1,263 @@
-[]
+[
+  {
+    "description": "  As an API consumer\n  I want to retrieve user details\n  So that I can display user information in the application",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-details-api;successfully-fetch-user-details",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Successfully fetch user details",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have a valid authentication token",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7587700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I send a GET request to \"/api/v1/auth/me\"",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2151968600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1625600,
+              "error_message": "ReferenceError: AllureReporter is not defined\n    at World.<anonymous> (C:\\Users\\gyana\\Automation-Product-Test\\Caffetest\\APIs\\tests\\step-definitions\\/GetUser.js:39:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response should contain user details",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"message\": \"string\",\n  \"user\": {\n    \"_id\": \"string\",\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"isVerified\": \"boolean\",\n    \"createdAt\": \"string\",\n    \"updatedAt\": \"string\",\n    \"__v\": \"number\"\n  }\n}",
+                "line": 15
+              }
+            ],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the response should match JSON schema:",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 9
+          },
+          {
+            "name": "@user",
+            "line": 9
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-details-api;fetch-user-details-with-invalid-token",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Fetch user details with invalid token",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have a valid authentication token",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10629599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I have an invalid authentication token",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1008699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I send a GET request to \"/api/v1/auth/me\"",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158715699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the response status should be 401",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1693899,
+              "error_message": "ReferenceError: AllureReporter is not defined\n    at World.<anonymous> (C:\\Users\\gyana\\Automation-Product-Test\\Caffetest\\APIs\\tests\\step-definitions\\/GetUser.js:39:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the response should contain an error message",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 30
+          },
+          {
+            "name": "@validation",
+            "line": 30
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-details-api;fetch-user-details-without-authentication",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Fetch user details without authentication",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I have a valid authentication token",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I don't have an authentication token",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 888599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I send a GET request to \"/api/v1/auth/me\"",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6641100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the response status should be 401",
+            "match": {
+              "location": "tests\\step-definitions\\GetUser.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 233999,
+              "error_message": "ReferenceError: AllureReporter is not defined\n    at World.<anonymous> (C:\\Users\\gyana\\Automation-Product-Test\\Caffetest\\APIs\\tests\\step-definitions\\/GetUser.js:39:3)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 37
+          },
+          {
+            "name": "@validation",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-details-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Details API",
+    "tags": [],
+    "uri": "tests\\features\\GetUser.feature"
+  }
+]
