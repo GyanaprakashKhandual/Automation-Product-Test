@@ -1,32 +1,34 @@
-const reporter = require('@wdio/allure-reporter').default;
+const { AllureRuntime } = require("allure-js-commons ");
+
+const runtime = new AllureRuntime({ resultsDir: "./allure-results" });
 
 class AllureHelper {
-  static addStep(name, status = 'passed', attachment = null) {
-    reporter.addStep(name, status, attachment);
+  static addStep(name, status = "passed") {
+    // Valid statuses: "passed" | "failed" | "broken" | "skipped"
+    runtime.writeAttachment(
+      Buffer.from(`Step: ${name}, Status: ${status}`),
+      { contentType: "text/plain" }
+    );
   }
 
-  static addAttachment(name, content, type = 'text/plain') {
-    reporter.addAttachment(name, content, type);
+  static addAttachment(name, content, type = "text/plain") {
+    runtime.writeAttachment(content, { contentType: type });
   }
 
   static addFeature(name) {
-    reporter.addFeature(name);
+    runtime.writeAttachment(Buffer.from(`Feature: ${name}`), {
+      contentType: "text/plain",
+    });
   }
 
   static addStory(name) {
-    reporter.addStory(name);
+    runtime.writeAttachment(Buffer.from(`Story: ${name}`), {
+      contentType: "text/plain",
+    });
   }
 
-  static addDescription(description, type = 'text') {
-    reporter.addDescription(description, type);
-  }
-
-  static startStep(name) {
-    reporter.startStep(name);
-  }
-
-  static endStep(status = 'passed') {
-    reporter.endStep(status);
+  static addDescription(description, type = "text") {
+    runtime.writeAttachment(description, { contentType: type });
   }
 }
 
