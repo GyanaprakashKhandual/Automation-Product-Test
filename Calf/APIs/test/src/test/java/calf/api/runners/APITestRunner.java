@@ -1,14 +1,15 @@
 package calf.api.runners;
 
+import org.testng.annotations.DataProvider;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {
-        "com.yourcompany.api.stepdefinitions",
-        "com.yourcompany.api.hooks"
+        "com.calf.api.stepdefinitions",
+        "com.calf.api.hooks"
     },
     plugin = {
         "pretty",
