@@ -3,18 +3,18 @@
 <suite name="API Test Suite" parallel="tests" thread-count="4">
     
     <listeners>
-        <listener class-name="com.yourcompany.api.listeners.TestNGListener"/>
+        <listener class-name="com.calf.api.listeners.TestNGListener"/>
     </listeners>
     
     <test name="User API Tests" parallel="methods" thread-count="3">
         <classes>
-            <class name="com.yourcompany.api.runners.APITestRunner"/>
+            <class name="com.calf.api.runners.APITestRunner"/>
         </classes>
     </test>
     
     <test name="Product API Tests" parallel="methods" thread-count="3">
         <classes>
-            <class name="com.yourcompany.api.runners.ProductTestRunner"/>
+            <class name="com.calf.api.runners.ProductTestRunner"/>
         </classes>
     </test>
     

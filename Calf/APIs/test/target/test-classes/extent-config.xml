@@ -2,7 +2,7 @@
 <extentreports>
     <configuration>
         <!-- report theme -->
-        <theme>dark</theme>
+        <theme>standard</theme>
         
         <!-- document encoding -->
         <encoding>UTF-8</encoding>
