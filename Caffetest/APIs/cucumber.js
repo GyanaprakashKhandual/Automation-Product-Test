@@ -1,6 +1,6 @@
 module.exports = {
   default: {
-    require: ['./tests/step-definitions/**/*.js', './src/hooks/hooks.js'],
+    require: ['./tests/stepsdefinitions/**/*.js', './src/hooks/hooks.js'],
     requireModule: ['@babel/register'],
     format: [
       'progress-bar',
