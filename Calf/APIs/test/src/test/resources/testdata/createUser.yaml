@@ -1,0 +1,11 @@
+testCase1:
+  name: "John Doe"
+  email: "john.doe@email.com"
+  username: "johndoe"
+  expectedStatusCode: 201
+
+testCase2:
+  name: "Jane Smith"
+  email: "jane.smith@email.com"
+  username: "janesmith"
+  expectedStatusCode: 201
